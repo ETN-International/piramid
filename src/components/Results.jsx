@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { FileText, ClipboardCheck, ExternalLink, Users, Building2, BookOpen } from 'lucide-react';
 
 const Results = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
 
   const surveyLanguages = [
     { code: 'EN', name: 'English', link: 'https://drive.google.com/file/d/16wQYlCyVpXMbVudIYFX4SGQGuNrjyzpH/view' },
@@ -30,7 +31,7 @@ const Results = () => {
       icon: <ClipboardCheck className="w-8 h-8" />,
       type: 'link',
       btnTextKey: 'results.accessIndex',
-      link: 'https://www.piramiderasmusplusplatform.com/intercultural-index'
+      link: `https://www.piramiderasmusplusplatform.com/${lang}/intercultural-index`
     },
     {
       id: 3,
@@ -38,7 +39,7 @@ const Results = () => {
       icon: <Users className="w-8 h-8" />,
       type: 'link',
       btnTextKey: 'results.accessCourse',
-      link: 'https://www.piramiderasmusplusplatform.com/online-course-for-vet-students'
+      link: `https://www.piramiderasmusplusplatform.com/${lang}/online-course-for-vet-students`
     },
     {
       id: 4,
@@ -46,7 +47,7 @@ const Results = () => {
       icon: <BookOpen className="w-8 h-8" />,
       type: 'link',
       btnTextKey: 'results.accessCourse',
-      link: 'https://www.piramiderasmusplusplatform.com/online-course-for-vet-teachers'
+      link: `https://www.piramiderasmusplusplatform.com/${lang}/online-course-for-vet-teachers`
     },
     {
       id: 5,
@@ -54,7 +55,7 @@ const Results = () => {
       icon: <Building2 className="w-8 h-8" />,
       type: 'link',
       btnTextKey: 'results.accessCourse',
-      link: 'https://www.piramiderasmusplusplatform.com/online-course-for-host-companies'
+      link: `https://www.piramiderasmusplusplatform.com/${lang}/online-course-for-host-companies`
     }
   ];
 
