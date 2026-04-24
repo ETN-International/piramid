@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Hero = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative min-h-[80vh] flex items-center pt-40 pb-20 overflow-hidden bg-slate-900">
+    <section className="relative min-h-[80vh] flex items-center pt-40 pb-20 overflow-hidden bg-piramid-navy">
       {/* Subtle Background Accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-eu-blue/5 z-0"></div>
 
