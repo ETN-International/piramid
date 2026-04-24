@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.png';
 
 const About = () => {
+  const { t } = useTranslation();
   const [logoError, setLogoError] = useState(false);
 
   return (
@@ -25,22 +27,22 @@ const About = () => {
                 />
               )}
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 relative">
-                The Project
+                {t('about.title')}
                 <span className="absolute -bottom-3 left-0 w-24 h-2 bg-piramid-orange rounded-full"></span>
               </h2>
             </div>
-            
+
             <div className="space-y-6">
               <p className="text-xl text-slate-600 leading-relaxed">
-                <strong className="text-eu-blue font-black">P.IR.A.M.iD. (Path for Intercultural Awareness, Measurement and Development)</strong> aims to structure the intercultural competencies of VET students and teachers in the tourism sector.
+                <strong className="text-eu-blue font-black">{t('about.leadBold')}</strong>{t('about.leadRest')}
               </p>
               <p className="text-lg text-slate-500 leading-relaxed">
-                By collaborating directly with tourism companies through training activities and transnational mobilities, we raise awareness and provide applicable tools for defining and assessing critical competences.
+                {t('about.body')}
               </p>
             </div>
 
             <div className="mt-12 p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex flex-col group hover:bg-white hover:shadow-2xl transition-all duration-500">
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Project Number</p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">{t('about.projectNumberLabel')}</p>
               <p className="text-xl font-black text-eu-blue">2023-1-ES01-KA220-VET-000157060</p>
             </div>
           </motion.div>

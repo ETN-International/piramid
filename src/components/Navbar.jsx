@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.png';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -20,22 +23,24 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '/#about' },
-    { name: 'Objectives', href: '/#objectives' },
-    { name: 'Partners', href: '/#partners' },
-    { name: 'Results', href: '/#results' },
-    { name: 'News', href: '/#news' },
+    { key: 'about', href: '/#about' },
+    { key: 'objectives', href: '/#objectives' },
+    { key: 'partners', href: '/#partners' },
+    { key: 'results', href: '/#results' },
+    { key: 'news', href: '/#news' },
   ];
 
+  const lightSurface = scrolled || !isHome;
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || !isHome ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${lightSurface ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-5 group">
           <div className="relative flex items-center">
             {!logoError ? (
-              <img 
-                src={logo} 
-                alt="PIRAMID Logo" 
+              <img
+                src={logo}
+                alt="PIRAMID Logo"
                 className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 onError={() => setLogoError(true)}
               />
@@ -46,11 +51,11 @@ const Navbar = () => {
             )}
           </div>
           <div className="flex flex-col">
-            <span className={`font-black text-3xl md:text-4xl tracking-tighter leading-none transition-colors ${scrolled || !isHome ? 'text-eu-blue' : 'text-white'}`}>
+            <span className={`font-black text-3xl md:text-4xl tracking-tighter leading-none transition-colors ${lightSurface ? 'text-eu-blue' : 'text-white'}`}>
               P.IR.A.M.iD
             </span>
-            <span className={`text-xs font-black uppercase tracking-[0.3em] transition-colors ${scrolled || !isHome ? 'text-slate-400' : 'text-white/60'}`}>
-              Erasmus+ Project
+            <span className={`text-xs font-black uppercase tracking-[0.3em] transition-colors ${lightSurface ? 'text-slate-400' : 'text-white/60'}`}>
+              {t('nav.tagline')}
             </span>
           </div>
         </Link>
@@ -59,24 +64,22 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a
-              key={link.name}
+              key={link.key}
               href={link.href}
-              className={`text-sm font-black uppercase tracking-widest transition-all hover:text-piramid-orange hover:translate-y-[-2px] ${scrolled || !isHome ? 'text-slate-600' : 'text-white'}`}
+              className={`text-sm font-black uppercase tracking-widest transition-all hover:text-piramid-orange hover:translate-y-[-2px] ${lightSurface ? 'text-slate-600' : 'text-white'}`}
             >
-              {link.name}
+              {t(`nav.${link.key}`)}
             </a>
           ))}
-          <div className="flex items-center space-x-2 cursor-pointer group bg-slate-100/10 px-5 py-2.5 rounded-full border border-white/10 hover:bg-piramid-orange/20 transition-all">
-            <Globe className={`w-4 h-4 ${scrolled || !isHome ? 'text-eu-blue' : 'text-white'}`} />
-            <span className={`text-xs font-black ${scrolled || !isHome ? 'text-slate-900' : 'text-white'}`}>EN</span>
-          </div>
+          <LanguageSelector variant={lightSurface ? 'light' : 'dark'} />
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden">
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className={`p-3 rounded-2xl transition-colors ${scrolled || !isHome ? 'bg-slate-100 text-eu-blue' : 'bg-white/10 text-white'}`}
+        <div className="lg:hidden flex items-center gap-3">
+          <LanguageSelector variant={lightSurface ? 'light' : 'dark'} />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`p-3 rounded-2xl transition-colors ${lightSurface ? 'bg-slate-100 text-eu-blue' : 'bg-white/10 text-white'}`}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -94,26 +97,26 @@ const Navbar = () => {
           >
             <div className="p-8 h-full flex flex-col">
               <div className="flex justify-between items-center mb-16">
-                <span className="font-black text-2xl text-eu-blue">Menu</span>
+                <span className="font-black text-2xl text-eu-blue">{t('nav.menu')}</span>
                 <button onClick={() => setIsOpen(false)} className="p-2 bg-slate-100 rounded-full"><X size={24} /></button>
               </div>
               <div className="space-y-8 flex-grow">
                 {navLinks.map((link) => (
                   <a
-                    key={link.name}
+                    key={link.key}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="block text-3xl font-black text-slate-900 hover:text-eu-blue transition-colors uppercase tracking-tighter"
                   >
-                    {link.name}
+                    {t(`nav.${link.key}`)}
                   </a>
                 ))}
               </div>
               <div className="pt-8 border-t border-slate-100 flex items-center justify-between">
-                <div className="flex items-center space-x-3 text-slate-500">
-                  <Globe className="w-5 h-5" />
-                  <span className="font-bold">English</span>
-                </div>
+                <span className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">
+                  {t('nav.languageLabel')}
+                </span>
+                <LanguageSelector variant="light" />
               </div>
             </div>
           </motion.div>

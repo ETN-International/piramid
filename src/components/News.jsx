@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { newsData } from '../data/newsData';
 
 const News = () => {
+  const { t } = useTranslation();
   // Show only the latest 3 on the home page
   const displayedNews = newsData.slice(0, 3);
 
@@ -18,16 +20,18 @@ const News = () => {
           className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
         >
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter">Latest News</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter">{t('news.title')}</h2>
             <p className="text-xl text-slate-600 font-medium">
-              Stay updated with the latest events, training launches, and project milestones 
-              from across the PIRAMID consortium.
+              {t('news.subtitle')}
             </p>
           </div>
-          <button className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-eu-blue transition-all flex items-center gap-3 group">
-            View All News
+          <Link
+            to="/news"
+            className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-eu-blue transition-all flex items-center gap-3 group"
+          >
+            {t('news.viewAll')}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -59,11 +63,11 @@ const News = () => {
                   {item.excerpt}
                 </p>
                 <div className="mt-auto">
-                  <Link 
+                  <Link
                     to={`/news/${item.id}`}
                     className="inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 group/btn hover:text-eu-blue transition-colors"
                   >
-                    Read Story
+                    {t('news.readStory')}
                     <div className="w-10 h-10 rounded-2xl bg-slate-100 flex items-center justify-center group-hover/btn:bg-eu-blue group-hover/btn:text-white transition-all duration-300">
                       <ArrowRight size={16} />
                     </div>

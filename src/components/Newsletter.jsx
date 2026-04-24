@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle2, Heart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Newsletter = () => {
+  const { t } = useTranslation();
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
   const handleSubmit = async (e) => {
@@ -53,10 +55,10 @@ const Newsletter = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter">
-            Stay Updated
+            {t('newsletter.title')}
           </h2>
           <p className="text-xl text-white/80 mb-12 font-medium">
-            Subscribe to our newsletter to receive the latest news and updates about the P.IR.A.M.iD. project.
+            {t('newsletter.subtitle')}
           </p>
 
           <div className="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden border-4 border-white/10 min-h-[200px] flex flex-col justify-center">
@@ -71,8 +73,8 @@ const Newsletter = () => {
                   <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Heart fill="currentColor" size={32} />
                   </div>
-                  <h3 className="text-3xl font-black text-slate-900 mb-2 tracking-tight uppercase">Thank You!</h3>
-                  <p className="text-slate-500 font-bold">Your subscription has been successful. Welcome to our community!</p>
+                  <h3 className="text-3xl font-black text-slate-900 mb-2 tracking-tight uppercase">{t('newsletter.thankYou')}</h3>
+                  <p className="text-slate-500 font-bold">{t('newsletter.successMessage')}</p>
                 </motion.div>
               ) : (
                 <motion.div 
@@ -86,10 +88,10 @@ const Newsletter = () => {
                     className="flex flex-col md:flex-row gap-4 items-stretch"
                   >
                     <div className="flex-grow relative">
-                      <input 
-                        type="email" 
-                        name="fields[email]" 
-                        placeholder="Enter your email address" 
+                      <input
+                        type="email"
+                        name="fields[email]"
+                        placeholder={t('newsletter.placeholder')}
                         className="w-full px-8 py-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 font-bold focus:outline-none focus:border-eu-blue transition-all disabled:opacity-50"
                         required
                         disabled={status === 'loading'}
@@ -104,7 +106,7 @@ const Newsletter = () => {
                       disabled={status === 'loading'}
                       className="px-12 py-5 bg-eu-blue text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-blue-900/20 flex items-center justify-center gap-3 shrink-0 disabled:bg-slate-300"
                     >
-                      {status === 'loading' ? 'Sending...' : 'Subscribe Now'}
+                      {status === 'loading' ? t('newsletter.sending') : t('newsletter.subscribe')}
                       <Send className="w-4 h-4" />
                     </button>
                   </form>
@@ -112,12 +114,12 @@ const Newsletter = () => {
                   <div className="mt-8 flex items-center justify-center gap-4 text-slate-400 text-xs font-bold uppercase tracking-widest">
                     <span className="flex items-center gap-2">
                       <CheckCircle2 size={14} className="text-emerald-500" />
-                      No Spam
+                      {t('newsletter.noSpam')}
                     </span>
                     <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
                     <span className="flex items-center gap-2">
                       <CheckCircle2 size={14} className="text-emerald-500" />
-                      Unsubscribe anytime
+                      {t('newsletter.unsubscribe')}
                     </span>
                   </div>
                 </motion.div>
@@ -126,7 +128,7 @@ const Newsletter = () => {
           </div>
           
           <p className="mt-10 text-white/60 text-[10px] font-black uppercase tracking-[0.2em]">
-            Join our international community today
+            {t('newsletter.join')}
           </p>
         </motion.div>
       </div>

@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "about": "Projekt",
+    "objectives": "Cele",
+    "partners": "Partnerzy",
+    "results": "Rezultaty",
+    "news": "Aktualności",
+    "menu": "Menu",
+    "tagline": "Projekt Erasmus+",
+    "languageLabel": "Język"
+  },
+  "hero": {
+    "titlePart1": "Ścieżka do",
+    "titleHighlight": "międzykulturowej",
+    "titlePart2": "świadomości, pomiaru i",
+    "titleEmphasis": "rozwoju",
+    "ctaPlatform": "Wejdź na platformę",
+    "ctaLearn": "Dowiedz się więcej"
+  },
+  "about": {
+    "title": "Projekt",
+    "leadBold": "P.IR.A.M.iD. (Path for Intercultural Awareness, Measurement and Development)",
+    "leadRest": " ma na celu uporządkowanie kompetencji międzykulturowych uczniów i nauczycieli kształcenia zawodowego (VET) w sektorze turystyki.",
+    "body": "Współpracując bezpośrednio z firmami turystycznymi poprzez działania szkoleniowe i mobilności międzynarodowe, podnosimy świadomość i udostępniamy praktyczne narzędzia do definiowania i oceny kluczowych kompetencji.",
+    "projectNumberLabel": "Numer Projektu"
+  },
+  "objectives": {
+    "title": "Nasze Cele",
+    "subtitle": "Projekt P.IR.A.M.iD opiera się na fundamencie integracji i rozwoju umiejętności w europejskim sektorze turystyki.",
+    "items": {
+      "integration": { "title": "Integracja i Włączenie", "desc": "Promowanie integracji, włączenia i dobrostanu w kontekstach międzykulturowych." },
+      "dialogue": { "title": "Dialog Międzykulturowy", "desc": "Pobudzanie i aktywizowanie dialogu międzykulturowego oraz umiejętności międzykulturowych." },
+      "innovative": { "title": "Innowacyjne Metody", "desc": "Testowanie innowacyjnych metodologii i narzędzi do zdobywania kompetencji." },
+      "vet": { "title": "Kształcenie VET", "desc": "Zwiększanie i poprawa uznawania kompetencji międzykulturowych u nauczycieli." },
+      "company": { "title": "Świadomość w firmach", "desc": "Umożliwienie firmom turystycznym upowszechniania rezultatów projektu wewnątrz i na zewnątrz." },
+      "cooperation": { "title": "Współpraca", "desc": "Wzmacnianie współpracy pomiędzy grupami docelowymi a partnerami z różnych krajów." },
+      "european": { "title": "Wymiar Europejski", "desc": "Wzmacnianie wymiaru europejskiego w celu kształtowania odpowiedzialnych przyszłych obywateli." },
+      "skill": { "title": "Uznawanie Umiejętności", "desc": "Podnoszenie kompetencji międzykulturowych, językowych i społecznych poprzez działania projektowe." }
+    }
+  },
+  "partners": {
+    "title": "Partnerzy",
+    "subtitle": "Strategiczne partnerstwo pięciu organizacji z całej Europy, dedykowane pomiarom i rozwojowi międzykulturowemu w sektorze turystyki."
+  },
+  "results": {
+    "title": "Rezultaty Projektu",
+    "subtitle": "Poznaj konkretne rezultaty i narzędzia edukacyjne wypracowane w trakcie całego cyklu projektu PIRAMID.",
+    "accessIndex": "Przejdź do Indeksu",
+    "accessCourse": "Przejdź do Kursu",
+    "items": {
+      "survey": { "title": "Raport z Ankiety i Model Teoretyczny P.IR.A.M.iD.", "description": "Przeprowadzenie ankiety w celu określenia realizacji modelu. Uzyskaj dostęp do dokumentacji w preferowanym języku." },
+      "index": { "title": "Indeks Międzykulturowy P.IR.A.M.iD.", "description": "Rozwój Indeksu Międzykulturowego (walidowany test). Zmierz swoją świadomość międzykulturową poprzez naszą platformę." },
+      "students": { "title": "Kurs P.IR.A.M.iD. dla Uczniów" },
+      "teachers": { "title": "Kurs P.IR.A.M.iD. dla Nauczycieli" },
+      "tutors": { "title": "Kurs P.IR.A.M.iD. dla Tutorów" }
+    }
+  },
+  "workPackages": {
+    "title": "Pakiety Roboczne",
+    "subtitle": "Projekt jest podzielony na cztery główne fazy rozwoju, zapewniając naukową rzetelność i praktyczne zastosowanie w realnym środowisku turystycznym.",
+    "phasesLabel": "4 Fazy",
+    "architectureLabel": "Architektura Projektu",
+    "items": {
+      "wp1": { "title": "Ankieta i Model", "desc": "Przeprowadzenie ankiety w celu określenia realizacji modelu i ram teoretycznych." },
+      "wp2": { "title": "Indeks Międzykulturowy", "desc": "Opracowanie i walidacja standaryzowanego testu do pomiaru kompetencji międzykulturowych." },
+      "wp3": { "title": "Kurs Szkoleniowy", "desc": "Kompleksowe moduły dla uczniów, nauczycieli VET i tutorów w firmach przyjmujących." },
+      "wp4": { "title": "Mobilność Szkoleniowa", "desc": "Realizacja fizycznych mobilności międzynarodowych dla uczniów i nauczycieli." }
+    }
+  },
+  "news": {
+    "title": "Najnowsze Aktualności",
+    "subtitle": "Bądź na bieżąco z najnowszymi wydarzeniami, premierami szkoleń i kamieniami milowymi z całego konsorcjum PIRAMID.",
+    "viewAll": "Zobacz wszystkie aktualności",
+    "readStory": "Czytaj dalej"
+  },
+  "newsletter": {
+    "title": "Bądź na bieżąco",
+    "subtitle": "Zapisz się do naszego newslettera, aby otrzymywać najnowsze wiadomości i aktualizacje dotyczące projektu P.IR.A.M.iD.",
+    "placeholder": "Wpisz swój adres email",
+    "subscribe": "Zapisz się",
+    "sending": "Wysyłanie...",
+    "noSpam": "Bez spamu",
+    "unsubscribe": "Wypisz się w dowolnym momencie",
+    "join": "Dołącz dziś do naszej międzynarodowej społeczności",
+    "thankYou": "Dziękujemy!",
+    "successMessage": "Twoja subskrypcja została pomyślnie zarejestrowana. Witamy w naszej społeczności!"
+  },
+  "euFunding": {
+    "altText": "Współfinansowane przez Unię Europejską",
+    "disclaimer": "Ten projekt został sfinansowany przy wsparciu Komisji Europejskiej. Publikacja ta odzwierciedla jedynie stanowisko jej autorów, a Komisja nie ponosi odpowiedzialności za wykorzystanie zawartych w niej informacji."
+  },
+  "footer": {
+    "description": "Path for Intercultural Awareness, Measurement and Development. Europejski projekt skupiony na sektorze turystycznym i kształceniu zawodowym VET.",
+    "projectHeading": "Projekt",
+    "contactHeading": "Kontakt",
+    "funded": "Finansowany z programu Erasmus+ Unii Europejskiej. ID projektu: 2023-1-ES01-KA220-VET-000157060",
+    "copyright": "Projekt P.IR.A.M.iD • Wszelkie prawa zastrzeżone",
+    "privacy": "Prywatność",
+    "cookies": "Pliki cookie",
+    "legal": "Informacje prawne"
+  },
+  "allNews": {
+    "backHome": "Powrót do strony głównej",
+    "title": "Wszystkie Aktualności",
+    "subtitle": "Przeglądaj wszystkie aktualizacje, wydarzenia i kamienie milowe konsorcjum PIRAMID.",
+    "searchPlaceholder": "Szukaj w aktualnościach...",
+    "article_one": "Artykuł",
+    "article_other": "Artykuły",
+    "noResults": "Brak aktualności pasujących do wyszukiwania."
+  },
+  "newsDetail": {
+    "back": "Powrót do projektów",
+    "share": "Udostępnij:",
+    "projectSummaryTitle": "Podsumowanie Projektu",
+    "projectSummaryText": "PIRAMID to projekt Erasmus+ skupiony na świadomości międzykulturowej w branży turystycznej.",
+    "learnMore": "Poznaj PIRAMID",
+    "newsletterTitle": "Zapisz się do Newslettera",
+    "newsletterText": "Bądź na bieżąco z nadchodzącymi wydarzeniami i kamieniami milowymi projektu.",
+    "emailPlaceholder": "Adres email",
+    "subscribe": "Zapisz się",
+    "notFound": "Nie znaleziono aktualności",
+    "returnHome": "Powrót do strony głównej"
+  }
+}

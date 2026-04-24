@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { partnersData } from '../data/partnersData';
 import { ExternalLink } from 'lucide-react';
 
 const Partners = () => {
+  const { t } = useTranslation();
   return (
     <section id="partners" className="section-padding bg-white">
       <div className="container-custom">
@@ -13,10 +15,9 @@ const Partners = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter">Partners</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter">{t('partners.title')}</h2>
           <p className="text-xl text-slate-500 font-medium">
-            A strategic partnership of five organizations across Europe dedicated to 
-            intercultural measurement and development in the tourism sector.
+            {t('partners.subtitle')}
           </p>
         </motion.div>
 
