@@ -17,7 +17,7 @@ const EUFunding = () => {
             <img
               src="/eu-logo.png"
               alt={t('euFunding.altText')}
-              className="h-24 md:h-32 w-auto object-contain"
+              className="h-40 md:h-56 w-auto object-contain"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'flex';
