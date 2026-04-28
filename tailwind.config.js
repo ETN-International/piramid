@@ -11,7 +11,7 @@ export default {
         'eu-yellow': '#FFCC00',
         'piramid-orange': '#F59E0B',
         'piramid-gold': '#D97706',
-        'piramid-navy': '#0A192F',
+        'piramid-navy': '#0177bd',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Youtube } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.png';
 
@@ -43,11 +43,12 @@ const Footer = () => {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              {['Facebook', 'Twitter', 'Linkedin'].map((social) => (
-                <a key={social} href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-eu-blue hover:border-eu-blue hover:shadow-lg transition-all duration-300">
-                  {social === 'Facebook' && <Facebook size={18} />}
-                  {social === 'Twitter' && <Twitter size={18} />}
-                  {social === 'Linkedin' && <Linkedin size={18} />}
+              {[
+                { name: 'YouTube', icon: <Youtube size={18} />, href: 'https://www.youtube.com/@piramiderasmusplus/videos' },
+                { name: 'TikTok', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z"/></svg>, href: 'https://www.tiktok.com/@piramiderasmusplus' }
+              ].map((social) => (
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-eu-blue hover:border-eu-blue hover:shadow-lg transition-all duration-300">
+                  {social.icon}
                 </a>
               ))}
             </div>
